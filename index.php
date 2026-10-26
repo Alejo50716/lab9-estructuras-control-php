@@ -177,13 +177,27 @@ $total = $base + ($base * ITBMS);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="lab9-huella" content="<?= $huella ?>">
   <title>Lab 9 · Estructuras de control</title>
-  <!-- TODO CSS-1: enlaza css/estilos.css (CSS externo) -->
-  <!-- TODO CSS-2: agrega un <style> interno con al menos 2 reglas -->
+  <link rel="stylesheet" href="css/estilos.css">
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+    th, td {
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid #dce3ed;
+    }
+    th {
+      background: #eaf0f8;
+      color: #1f3a5f;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <!-- TODO CSS-3: agrega un atributo style (CSS en línea) a este h1 -->
-    <h1>Laboratorio #9 · Estructuras de control</h1>
+    <h1 style="margin: 0; font-size: 1.8rem; line-height: 1.3;">Laboratorio #9 · Estructuras de control</h1>
     <p id="autor">Autor: <?= $nombreCompleto ?></p>
   </header>
 
@@ -212,8 +226,7 @@ $total = $base + ($base * ITBMS);
 
     <section id="ej2">
       <h2>Ejercicio 2 · Notas</h2>
-      <!-- TODO CSS-4: agrega la clase "ok" o "error" con PHP según el estado -->
-      <p id="ej2-res" class="resultado">Promedio: <?= number_format($promedio, 2) ?> | Letra: <?= $letra ?> | Estado: <?= $estado ?> | Cuadro de honor: <?= $cuadroHonor ?></p>
+      <p id="ej2-res" class="resultado <?= $promedio >= 70 ? 'ok' : 'error' ?>">Promedio: <?= number_format($promedio, 2) ?> | Letra: <?= $letra ?> | Estado: <?= $estado ?> | Cuadro de honor: <?= $cuadroHonor ?></p>
     </section>
 
     <section id="ej3">

@@ -28,4 +28,48 @@ section {
   background: #eef1f5;
 }
 
-/* TODO CSS-5: define aquí las clases .ok (fondo verde claro) y .error (fondo rojo claro) */
+.ok {
+  background: #e2f4e7;
+  color: #185a2d;
+  border-left: 4px solid #378451;
+}
+.error {
+  background: #fde5e5;
+  color: #8c2525;
+  border-left: 4px solid #bd4343;
+}
+header {
+  padding: 28px 24px;
+}
+h2 {
+  color: #1f3a5f;
+  font-size: 1.15rem;
+  line-height: 1.4;
+}
+p {
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+#autor {
+  margin-bottom: 0;
+}
+#ej5-total {
+  font-weight: bold;
+  color: #1f3a5f;
+}
+footer {
+  text-align: center;
+  line-height: 1.6;
+}
+@media (max-width: 480px) {
+  main {
+    padding: 0 12px;
+  }
+  header {
+    padding: 24px 16px;
+  }
+  th, td {
+    padding: 10px 8px;
+  }
+}
+
